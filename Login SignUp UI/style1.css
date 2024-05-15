@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+    font-weight: bold;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, rgb(110, 110, 255), rgb(122, 255, 105));
+}
+
+.loginForm{
+    display: flex;
+    position:absolute;
+
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(255, 255, 255, 0.3);
+
+    width: 25%;
+    min-width: 200px;
+    aspect-ratio: 3/4;  /*寬 : 長*/
+    /* height: 300px; */
+
+    /* padding: 40px; */
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+
+.loginForm .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 20%;
+}
+
+.loginForm .title h2{
+    font-size: 5vw;
+    /* margin-bottom: 20px; */
+    background: linear-gradient(to right, rgb(140, 0, 255), rgb(20, 20, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.loginForm p{
+    font-size: 1vw;
+    width: 100%;
+}
+
+.loginForm p button{
+    color: rgb(0, 0, 255);
+    font-size: 1vw;
+    background-color: transparent;
+    border: 0px solid rgb(0, 0, 0);
+    cursor: pointer !important;
+}
+
+.loginForm .inputBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 40%;
+}
+
+.loginForm .inputBox input{
+    width: 100%;
+    height: 25%;
+    font-size: 1.3vw;
+    
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin: 5% 0;
+}
+.loginForm .inputBox input::placeholder{
+    color: rgb(78, 78, 78);
+    font-size: 1.3vw;
+}
+.loginForm .inputBox input:focus{
+    outline: none;
+}
+
+.loginForm .bot1{
+    width: 40%;
+    height: 12%;
+    /* margin: 30px; */
+
+    background-color: rgb(104, 104, 253);
+
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-bottom: 5%;
+
+    cursor: pointer !important;
+}
+.loginForm .bot1:hover{
+    background-color: rgb(51, 51, 250);
+}
