@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        *:root{
+            --inputBoxH: 50px;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            gap: 10%;
+        }
+
+        .inputbox{
+            height: var(--inputBoxH);
+            aspect-ratio: 7 / 1;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+        .inputbox > input{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0, 0);
+            border: 2px solid rgb(80, 80, 80);
+
+            padding: 10px;
+            box-sizing: border-box;
+            outline: none;
+
+            position: absolute;
+        }
+
+        .inputbox > label{
+            color: rgb(80, 80, 80);
+            padding: 0 1%;
+
+            position: absolute;
+                left: 5%;
+                z-index: -1;
+            
+            transform: scale(1);
+            transform-origin: left;
+            transition: transform .1s;
+        }
+
+        .inputbox > input:focus{
+            border: 3px solid rgb(0, 81, 255);
+            border-radius: 5px;
+        }
+
+        .inputbox > input:focus + label,
+        .inputbox > input:not(:placeholder-shown) + label{
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+            transform: translateY(calc(var(--inputBoxH) / -2)) scale(0.8);
+        }
+
+        .inputbox > input:not(:placeholder-shown) + label{
+            color: rgb(80, 80, 80);
+        }
+
+        .inputbox > input:focus + label{
+            color: rgb(0, 81, 255);
+        }
+    </style>
+</head>
+<body>
+        <div class="inputbox">
+            <input type="email" placeholder=" "><label>請輸入電子郵件</label>
+        </div>
+
+        <div class="inputbox">
+            <input type="password" placeholder=" "><label>請輸入密碼</label>
+        </div>
+</body>
+</html>
