@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:root {
+  --x: 0;
+}
+
+body {
+  width: 1300px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+#a {
+  width: 20%;
+  aspect-ratio: 16/9;
+  background-color: black;
+}
+#a .b {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+#a .b .c {
+  height: 100%;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(var(--x));
+  transition: transform 0.5s ease-in-out;
+}
+#a .b .c .img {
+  width: 80%;
+  height: 80%;
+}
